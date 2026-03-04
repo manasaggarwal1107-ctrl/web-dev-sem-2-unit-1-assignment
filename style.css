@@ -92,7 +92,7 @@ button:hover {
   color: gray;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
@@ -100,4 +100,5 @@ button:hover {
   .card.full {
     grid-column: span 1;
   }
+
 }

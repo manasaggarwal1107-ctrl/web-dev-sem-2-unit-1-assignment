@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Event Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🎯 Smart Event Dashboard</h1>
+  </header>
+
+  <main class="container">
+
+    <!-- Left: Add New Event -->
+    <section class="card">
+      <h2>Add New Event</h2>
+      <form id="eventForm">
+        <label>Event Title</label>
+        <input type="text" id="title" required>
+
+        <label>Event Date</label>
+        <input type="date" id="date" required>
+
+        <label>Category</label>
+        <select id="category">
+          <option>Conference</option>
+          <option>Workshop</option>
+          <option>Meetup</option>
+        </select>
+
+        <label>Description</label>
+        <textarea id="description" required></textarea>
+
+        <button type="submit">Add Event</button>
+      </form>
+    </section>
+
+    <!-- Right: My Events -->
+    <section class="card">
+      <h2>My Events</h2>
+      <div class="actions">
+        <button id="clearAll">Clear All Events</button>
+        <button id="addSample">Add Sample Events</button>
+      </div>
+
+      <div id="eventContainer" class="event-list">
+        <p class="empty">No events yet. Add your first event!</p>
+      </div>
+    </section>
+
+    <!-- Bottom: DOM Panel -->
+    <section class="card full">
+      <h2>DOM Manipulation Demo</h2>
+      <ul>
+        <li><b>innerText:</b> returns visible text</li>
+        <li><b>textContent:</b> returns all text</li>
+        <li><b>innerHTML:</b> returns HTML content</li>
+        <li><b>querySelector:</b> selects first matching element</li>
+        <li><b>createElement:</b> creates new DOM node</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

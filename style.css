@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    rgb(120, 190, 255),
+    rgb(150, 230, 220)
+  );
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  color: rgb(0, 70, 140);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  color: rgb(0, 90, 160);
+  margin-bottom: 10px;
+}
+
+.card.full {
+  grid-column: span 2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input, textarea, select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+button {
+  background: rgb(130, 90, 255);
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(100, 60, 220);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.event-list {
+  min-height: 120px;
+}
+
+.event-card {
+  background: rgb(240, 248, 255);
+  padding: 10px;
+  border-left: 4px solid rgb(130, 90, 255);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.empty {
+  color: gray;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .card.full {
+    grid-column: span 1;
+  }
+}
